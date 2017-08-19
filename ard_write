@@ -1,0 +1,4 @@
+cd /home/chiraj/Projects/hid\ project/final/plat
+platformio run -e uno -t upload
+lsusb
+cd -

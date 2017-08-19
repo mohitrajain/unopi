@@ -1,0 +1,5 @@
+#!/bin/sh
+/usr/local/bin/dfu-programmer atmega16u2 erase --debug 99
+/usr/local/bin/dfu-programmer atmega16u2 flash --debug 99 Arduino-usbserial-uno.hex 
+/usr/local/bin/dfu-programmer atmega16u2 reset --debug 99
+lsusb

